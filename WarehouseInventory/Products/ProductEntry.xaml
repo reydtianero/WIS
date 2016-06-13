@@ -1,0 +1,57 @@
+﻿<Window x:Class="WarehouseInventory.Products.ProductEntry"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WarehouseInventory.Products"
+        mc:Ignorable="d"
+        Title="ProductEntry" Height="246.667" Width="400">
+    <Grid Margin="0,0,0,13">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Content="New Product" HorizontalContentAlignment="Center"></Label>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="SKU" Margin="50,0,10,0"></Label>
+            <Label Grid.Row="1" Grid.Column="0" Content="Name" Margin="50,0,10,0"></Label>
+            <Label Grid.Row="2" Grid.Column="0" Content="Price" Margin="50,0,10,0"></Label>
+            <Label Grid.Row="3" Grid.Column="0" Content="Quantiy" Margin="50,0,10,0"></Label>
+            <Label Grid.Row="4" Grid.Column="0" Content="Supplier" Margin="50,0,10,0"></Label>
+            <TextBox Grid.Row="0" Grid.Column="1" Margin="2,2,40,2"></TextBox>
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="2,2,40,2"></TextBox>
+            <TextBox Grid.Row="2" Grid.Column="1" Margin="2,2,40,2"></TextBox>
+            <TextBox Grid.Row="3" Grid.Column="1" Margin="2,2,40,2"></TextBox>
+            <ComboBox Grid.Row="4" Grid.Column="1" Margin="2,2,40,2" SelectionChanged="ComboBox_SelectionChanged">
+                <ComboBoxItem Content="Supplier1"/>
+                <ComboBoxItem Content="Supplier2"/>
+            </ComboBox>
+        </Grid>
+        <Grid Grid.Row="2" Margin="0,30,0,-13">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="1" Content="Save" Margin="10,0,10,0"></Button>
+            <Button Grid.Row="0" Grid.Column="2" Content="Save and New" Margin="10,0,10,0"></Button>
+            <Button Grid.Row="0" Grid.Column="3" Content="Close" Margin="10,0,40,0"></Button>
+        </Grid>
+    </Grid>
+</Window>
