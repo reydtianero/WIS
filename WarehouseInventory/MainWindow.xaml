@@ -5,7 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseInventory"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
-    <Grid>
+        Title="MainWindow" Height="195" Width="400">
+    <Grid Margin="0,0,0,25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="Auto" />
+            <RowDefinition Height ="40" />
+            <RowDefinition Height="42"/>
+            <RowDefinition Height ="Auto" />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="Login" HorizontalAlignment="Center" FontWeight="Bold" Margin="175,0"></Label>
+        <Grid Grid.Row="1" Margin="0,15,0,10" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="41*"/>
+                <ColumnDefinition Width="Auto" MinWidth="77"/>
+                <ColumnDefinition Width="Auto" MinWidth="137"/>
+                <ColumnDefinition Width="48*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="1" Content="User name" />
+            <Label Grid.Row="1" Grid.Column="1" Content="Password"/>
+            <TextBox Grid.Row="0" Grid.Column="2" Margin="5,5,5,5"/>
+            <TextBox Grid.Row="1" Grid.Column="2" Margin="5,5,5,5"/>
+        </Grid>
+
+        <Grid Grid.Row="3" Margin="10,10,-10,-10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="1" Content="Login" Margin="258,0,-257,0" />
+            <Button Grid.Row="0" Grid.Column="1" Content="Cancel" Margin="302,0,-302,0" />
+        </Grid>
+
     </Grid>
 </Window>
